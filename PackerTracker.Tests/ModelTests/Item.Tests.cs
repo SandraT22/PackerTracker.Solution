@@ -29,7 +29,18 @@ namespace PackerTracker.Tests
       string status = "testStatus";
       Item newItem = new Item(name, status);
       string result = newItem.Name;
-      Assert.AreEqual(status, result);
+      Assert.AreEqual(name, result);
+    }
+
+    [TestMethod]
+    public void ItemConstructor_ReturnStatus_String()
+    {
+      string name = "testName";
+      string status = "testStatus";
+      Item newItem = new Item(name, status);
+      string result = newItem.Status;
+      Assert.AreEqual(name, newItem.Name);
+      Assert.AreEqual(name, result);
     }
 
 
