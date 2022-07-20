@@ -18,7 +18,18 @@ namespace PackerTracker.Tests
     {
       Item newItem = new Item("testName", "testStatus");
       string x = "not Item";
-      Assert.AreEqual(typeof(Item), x.GetType());
+      // string x;
+      Assert.AreEqual(typeof(Item), newItem.GetType());
+    }
+
+    [TestMethod]
+    public void ItemConstructor_ReturnName_String()
+    {
+      string name = "testName";
+      string status = "testStatus";
+      Item newItem = new Item(name, status);
+      string result = newItem.Name;
+      Assert.AreEqual(status, result);
     }
 
 
